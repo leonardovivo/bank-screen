@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
-class QuickService extends StatelessWidget {
-  const QuickService({super.key});
+class QuickAndTransaction extends StatelessWidget {
+  const QuickAndTransaction({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +11,7 @@ class QuickService extends StatelessWidget {
       height: 300,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: Color.fromARGB(255, 19, 18, 18),
+        color: const Color.fromARGB(255, 19, 18, 18),
       ),
       child: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -34,7 +35,7 @@ class QuickService extends StatelessWidget {
                   onPressed: () {},
                   style: ButtonStyle(
                     backgroundColor: WidgetStateProperty.all<Color>(
-                      Color.fromARGB(255, 50, 155, 136),
+                      const Color.fromARGB(255, 106, 0, 255),
                     ),
                     shape: WidgetStateProperty.all<OutlinedBorder>(
                       RoundedRectangleBorder(
@@ -44,7 +45,7 @@ class QuickService extends StatelessWidget {
                   ),
                   child: const SizedBox(
                     height: 70,
-                    width: 130,
+                    width: 110,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -71,7 +72,7 @@ class QuickService extends StatelessWidget {
                   onPressed: () {},
                   style: ButtonStyle(
                     backgroundColor: WidgetStateProperty.all<Color>(
-                      Color.fromARGB(255, 222, 62, 62),
+                      const Color.fromARGB(255, 222, 62, 62),
                     ),
                     shape: WidgetStateProperty.all<OutlinedBorder>(
                       RoundedRectangleBorder(
@@ -81,7 +82,7 @@ class QuickService extends StatelessWidget {
                   ),
                   child: const SizedBox(
                     height: 70,
-                    width: 130,
+                    width: 110,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -102,6 +103,66 @@ class QuickService extends StatelessWidget {
                       ],
                     ),
                   ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 16.0),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  'Transaction',
+                  style: TextStyle(
+                    fontFamily: 'NotoSans',
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
+                  ),
+                ),
+                const SizedBox(height: 16.0),
+                Column(
+                  children: [
+                    Container(
+                      width: 328,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: const Color.fromARGB(255, 34, 33, 33),
+                      ),
+                      child: Center(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Container(
+                                width: 40,
+                                height: 40,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: const Color.fromARGB(255, 2, 255, 242)
+                                      .withOpacity(0.7),
+                                ),
+                                child: const Icon(
+                                  Icons.attach_money,
+                                  color: Colors.white,
+                                  size: 30,
+                                ),
+                              ),
+                            ),
+                            const Text(
+                              'Asdf',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
