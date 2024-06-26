@@ -1,7 +1,7 @@
 import 'package:bank_screen/card_box.dart';
 import 'package:bank_screen/income_box.dart';
 import 'package:bank_screen/spending_box.dart';
-import 'package:bank_screen/quick_service.dart';
+import 'package:bank_screen/quick_and_transaction.dart';
 import 'package:flutter/material.dart';
 
 class BankScreen extends StatelessWidget {
@@ -47,7 +47,7 @@ class BankScreen extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 16.0),
-              QuickService(),
+              QuickAndTransaction(),
             ],
           ),
         ),
