@@ -24,9 +24,28 @@ class BankScreen extends StatelessWidget {
             ),
           ),
         ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 20.0),
+            child: GestureDetector(
+              onTap: () {},
+              child: Container(
+                decoration: const BoxDecoration(
+                  color: Color.fromARGB(255, 2, 255, 242),
+                  shape: BoxShape.circle,
+                ),
+                padding: const EdgeInsets.all(8.0),
+                child: const Icon(
+                  Icons.add,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
-      body: const SingleChildScrollView(
-        child: Padding(
+      body: const SafeArea(
+        child: SingleChildScrollView(
           padding: EdgeInsets.all(16.0),
           child: Column(
             children: [
