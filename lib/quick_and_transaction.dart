@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class QuickAndTransaction extends StatelessWidget {
-  const QuickAndTransaction({Key? key});
+  const QuickAndTransaction({super.key, Key? Key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 300,
+      height: 360,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         color: const Color.fromARGB(255, 19, 18, 18),
@@ -33,16 +33,16 @@ class QuickAndTransaction extends StatelessWidget {
                 TextButton(
                   onPressed: () {},
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(
+                    backgroundColor: WidgetStateProperty.all<Color>(
                       const Color.fromARGB(255, 106, 0, 255),
                     ),
-                    shape: MaterialStateProperty.all<OutlinedBorder>(
+                    shape: WidgetStateProperty.all<OutlinedBorder>(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
                   ),
-                  child: SizedBox(
+                  child: const SizedBox(
                     height: 70,
                     width: 130,
                     child: Column(
@@ -70,16 +70,16 @@ class QuickAndTransaction extends StatelessWidget {
                 TextButton(
                   onPressed: () {},
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(
+                    backgroundColor: WidgetStateProperty.all<Color>(
                       const Color.fromARGB(255, 222, 62, 62),
                     ),
-                    shape: MaterialStateProperty.all<OutlinedBorder>(
+                    shape: WidgetStateProperty.all<OutlinedBorder>(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
                   ),
-                  child: SizedBox(
+                  child: const SizedBox(
                     height: 70,
                     width: 130,
                     child: Column(
@@ -178,9 +178,8 @@ class QuickAndTransaction extends StatelessWidget {
                           ),
                           const Spacer(),
                           const Padding(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 16.0),
-                            child: const Align(
+                            padding: EdgeInsets.symmetric(horizontal: 16.0),
+                            child: Align(
                               alignment: Alignment.bottomLeft,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -188,6 +187,103 @@ class QuickAndTransaction extends StatelessWidget {
                                   SizedBox(height: 8.0),
                                   Text(
                                     '-40',
+                                    style: TextStyle(
+                                      color: Color.fromARGB(255, 2, 255, 242),
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                    ),
+                                  ),
+                                  SizedBox(height: 4.0),
+                                  Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(
+                                      'about a month ago',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: "NotoSans",
+                                        fontWeight: FontWeight.normal,
+                                        fontSize: 12,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10.0),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: Container(
+                    width: 328,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: const Color.fromARGB(255, 34, 33, 33),
+                    ),
+                    child: Center(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              width: 40,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: const Color.fromARGB(255, 2, 255, 242)
+                                    .withOpacity(0.7),
+                              ),
+                              child: const Icon(
+                                Icons.attach_money,
+                                color: Colors.white,
+                                size: 30,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 8.0),
+                          const Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(height: 8.0),
+                              Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  'Safeway',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20,
+                                  ),
+                                ),
+                              ),
+                              Text(
+                                'Income',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontFamily: "NotoSans",
+                                  fontWeight: FontWeight.normal,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const Spacer(),
+                          const Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 16.0),
+                            child: Align(
+                              alignment: Alignment.bottomLeft,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  SizedBox(height: 8.0),
+                                  Text(
+                                    '40',
                                     style: TextStyle(
                                       color: Color.fromARGB(255, 2, 255, 242),
                                       fontWeight: FontWeight.bold,
